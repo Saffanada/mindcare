@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Masuk - MindCare</title><link rel="stylesheet" href="../css/style.css"></head>
+<body><div class="auth">
+<section class="hero"><span class="pill">RUANG TEMAN SEBAYA</span><h2>Ruang aman untuk saling menguatkan.</h2><p>Temukan rekan sebaya yang memahami dinamika harimu. Berbagi pengalaman tanpa penghakiman dalam komunitas yang peduli dan suportif.</p>
+<div class="kom"><div class="eb">Komitmen ruang aman kami</div><div class="k3"><div><i data-i="eyeoff"></i><span><b>100% Opsi Anonim</b>Bebas dari stigma</span></div><div><i data-i="shield"></i><span><b>Komunitas Terverifikasi</b>Moderasi empatik</span></div><div><i data-i="lock"></i><span><b>Privasi Terjaga</b>Terenkripsi aman</span></div></div>
+<div class="quote">"Di sini pertama kalinya aku bisa cerita soal burnout skripsi tanpa takut dibilang manja."<small>— Mahasiswa Tingkat Akhir, Jakarta</small></div></div></section>
+<section class="card fc"><h1 style="font-size:34px">Selamat Datang di MindCare</h1><p class="lead" style="font-size:15px">Masuk ke akunmu untuk melanjutkan perjalanan bertumbuh bersama.</p>
+<div class="tabs"><button class="on" data-m="masuk">Masuk</button><button data-m="daftar">Daftar</button></div>
+<form id="f"><div id="nm" hidden><label class="f">Nama Panggilan</label><div class="in"><i data-i="user"></i><input placeholder="Nama atau nama samaran"></div></div>
+<label class="f">Alamat Email</label><div class="in"><i data-i="mail"></i><input type="email" placeholder="nama@kampus.ac.id atau email kerjamu"></div>
+<label class="f">Kata Sandi</label><div class="in"><i data-i="lock"></i><input id="pw" type="password" placeholder="••••••••"><small id="lh">Lihat</small></div>
+<div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:24px"><label style="display:flex;gap:10px;align-items:center"><input type="checkbox"> Ingat saya di perangkat ini</label><a id="lp" href="#" style="color:var(--gd);font-weight:500">Lupa kata sandi?</a></div>
+<button class="btn" style="width:100%;height:48px" id="go">Masuk ke MindCare <i data-i="arrow"></i></button></form>
+<p style="text-align:center;margin-top:24px;font-size:14px;color:#444"><span id="sw">Belum punya akun?</span> <a href="#" id="sl" style="color:var(--gd);font-weight:600;font-size:13px">Daftar gratis</a></p>
+<div class="etik"><i data-i="shield"></i><div><b>Pemberitahuan Etis Komunitas</b>MindCare bukan alat diagnosis dan bukan pengganti layanan profesional. Jika kamu berada dalam kondisi darurat mental, hubungi segera hotline darurat Sejiwa 119 ext. 8.</div></div></section></div>
+<script src="../js/main.js"></script><script>
+let mode='masuk';const tb=[...document.querySelectorAll('.tabs button')];
+function set(m){mode=m;tb.forEach(b=>b.classList.toggle('on',b.dataset.m==m));nm.hidden=m=='masuk';lp.style.visibility=m=='masuk'?'visible':'hidden';go.innerHTML=(m=='masuk'?'Masuk ke MindCare':'Buat Akun')+' <i data-i="arrow"></i>';icons();sw.textContent=m=='masuk'?'Belum punya akun?':'Sudah punya akun?';sl.textContent=m=='masuk'?'Daftar gratis':'Masuk';document.querySelector('h1').textContent=m=='masuk'?'Selamat Datang di MindCare':'Mulai Perjalananmu'}
+tb.forEach(b=>b.onclick=()=>set(b.dataset.m));sl.onclick=e=>{e.preventDefault();set(mode=='masuk'?'daftar':'masuk')};
+lh.onclick=()=>{pw.type=pw.type=='password'?'text':'password';lh.textContent=pw.type=='password'?'Lihat':'Sembunyikan'};
+f.onsubmit=e=>{e.preventDefault();location.href=mode=='masuk'?'beranda.html':'onboarding.html'};
+</script></body></html>

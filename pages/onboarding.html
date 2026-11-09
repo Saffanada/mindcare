@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Onboarding - MindCare</title><link rel="stylesheet" href="../css/style.css"></head>
+<body><div class="ob">
+<div class="stp"><span class="n">1</span><b>Langkah 1 dari 3</b><span>• &nbsp;Personalisasi Ruang Dukunganmu</span><em>33% selesai</em></div><div class="bar"><i></i></div>
+<span class="tag"><i data-i="lotus" style="width:13px;height:13px;vertical-align:-2px"></i> Ruang Aman &amp; Tenang</span>
+<h1>Mari sesuaikan MindCare agar terasa aman dan relevan untuk perjalananmu, Raka.</h1><p class="lead" style="font-size:15px">Jawabanmu membantu kami merancang lingkungan perjumpaan sebaya yang selaras dengan kapasitas emosionalmu hari ini.</p>
+<div class="card"><div class="eb">Bagian 01</div><h3>Apa yang sedang kamu butuhkan?</h3><p class="sub">Pilih satu atau lebih topik yang paling menggambarkan situasi yang sedang kamu hadapi saat ini.</p>
+<div class="g2" id="g1">
+<button class="opt on"><i data-i="cap"></i><span><b>Stres akademik</b><small>Tugas akhir, beban skripsi, ekspektasi</small></span><span class="ck"><i data-i="check"></i></span></button>
+<button class="opt on"><i data-i="wind"></i><span><b>Kecemasan</b><small>Kekhawatiran masa depan, overthinking</small></span><span class="ck"><i data-i="check"></i></span></button>
+<button class="opt"><i data-i="batt"></i><span><b>Burnout</b><small>Kelelahan fisik &amp; mental pekerjaan</small></span><span class="ck"><i data-i="plus"></i></span></button>
+<button class="opt"><i data-i="lotus"></i><span><b>Gaya hidup sehat</b><small>Ritme tidur, meditasi, keseimbangan raga</small></span><span class="ck"><i data-i="plus"></i></span></button></div></div>
+<div class="card"><div class="eb">Bagian 02</div><h3>Apa tujuanmu di MindCare?</h3><p class="sub">Setiap langkah bermakna. Apa harapan utamamu bergabung bersama teman sebaya di sini?</p>
+<div class="row" id="g2"><button class="chip on"><i data-i="heart"></i>Berbagi cerita <i data-i="check"></i></button><button class="chip on"><i data-i="users"></i>Mencari dukungan <i data-i="check"></i></button><button class="chip on"><i data-i="book"></i>Menambah wawasan <i data-i="check"></i></button><button class="chip"><i data-i="smile"></i>Memantau mood <i data-i="plus"></i></button></div></div>
+<div class="card"><div class="eb">Bagian 03</div><h3>Bagaimana kamu ingin berinteraksi?</h3><p class="sub">Kenyamanan dan batasan pribadimu adalah prioritas utama kami.</p>
+<div class="tog"><i data-i="eyeoff" style="width:36px;height:36px;padding:8px;background:#E8E3DD;border-radius:10px;color:var(--g)"></i><div><b>Gunakan mode anonim secara default</b><p>Nama dan identitas aslimu disamarkan saat mengirim cerita atau menanggapi diskusi.</p></div><span class="sw on" id="sw"></span></div>
+<div class="eb" style="margin-bottom:12px">Pilih pola keikutsertaan</div><div class="g2" style="margin:0" id="g3">
+<button class="opt sq on"><i data-i="chat"></i><span class="rad"></span><b>Aktif berdiskusi</b><small>Ingin saling bertukar cerita dan memberi dukungan langsung di ruang komunitas.</small></button>
+<button class="opt sq"><i data-i="book"></i><span class="rad"></span><b>Membaca dulu</b><small>Ingin mengamati refleksi teman sebaya dengan tenang sebelum mulai menulis.</small></button></div></div>
+<div class="cta"><a class="btn" href="komunitas.html" style="padding:16px 32px">Lihat Rekomendasi Komunitas <i data-i="arrow"></i></a><a class="l" href="beranda.html">Lewati langkah ini untuk sekarang</a><p><i data-i="sliders" style="width:14px;height:14px;vertical-align:-2px"></i> Kamu selalu dapat mengubah preferensi ini kapan saja di menu Pengaturan &amp; Profil.</p></div></div>
+<script src="../js/main.js"></script><script>
+document.addEventListener('DOMContentLoaded',()=>{
+document.querySelectorAll('#g1 .opt').forEach(b=>b.onclick=()=>{b.classList.toggle('on');b.querySelector('.ck i').dataset.i=b.classList.contains('on')?'check':'plus';b.querySelector('.ck i').innerHTML=ic(b.classList.contains('on')?'check':'plus')});
+document.querySelectorAll('#g2 .chip').forEach(b=>b.onclick=()=>{b.classList.toggle('on');const x=b.lastElementChild,n=b.classList.contains('on')?'check':'plus';x.dataset.i=n;x.innerHTML=ic(n)});
+sw.onclick=()=>sw.classList.toggle('on');single('#g3 .opt');});
+</script></body></html>
